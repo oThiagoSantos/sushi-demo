@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth motion-reduce:scroll-auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Kokura Sushi | Sua Cidade - UF
+    </title>
+    <meta name="description" content="Restaurante de comida japonesa em Santana de Parnaíba">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Shippori+Mincho:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        carvao: '#16181A',
+                        grafite: '#202326',
+                        arroz: '#F6F2E9',
+                        atum: '#C8102E',
+                        salmao: '#F08A6C',
+                        nori: '#4A6B4F',
+                        ouro: '#B8975A'
+                    },
+                    fontFamily: {
+                        titulo: ['"Shippori Mincho"', 'serif'],
+                        texto: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-carvao font-texto text-arroz antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-ouro/20 bg-carvao/90 backdrop-blur">
+  <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+    <a href="#inicio" class="flex items-center gap-3">
+      <span class="grid h-9 w-9 place-items-center bg-atum font-titulo text-lg">
+        K
+      </span>
+      <span class="font-titulo text-lg tracking-wide">
+        Kokura Sushi
+      </span>
+    </a>
+
+    <ul class="hidden gap-8 text-sm uppercase tracking-widest md:flex">
+      <li><a href="#cardapio" class="link-animado transition hover:text-salmao">Cardápio</a></li>
+      <li><a href="#sobre" class="link-animado transition hover:text-salmao">Sobre</a></li>
+      <li><a href="#horarios" class="link-animado transition hover:text-salmao">Horários</a></li>
+      <li><a href="#contato" class="link-animado transition hover:text-salmao">Contato</a></li>
+    </ul>
+
+    <button id="menu-btn" type="button" class="relative h-10 w-10 md:hidden" aria-label="Abrir menu"
+      aria-expanded="false" aria-controls="menu-mobile">
+      <span class="barra barra-1"></span>
+      <span class="barra barra-2"></span>
+      <span class="barra barra-3"></span>
+    </button>
+  </nav>
+
+  <div id="menu-mobile" class="menu-mobile grid md:hidden">
+  <div class="min-h-0 overflow-hidden">
+    <ul class="space-y-1 border-t border-ouro/20 bg-grafite px-4 py-4 text-sm uppercase tracking-widest">
+      <li><a href="#cardapio" class="block py-2">Cardápio</a></li>
+      <li><a href="#sobre" class="block py-2">Sobre</a></li>
+      <li><a href="#horarios" class="block py-2">Horários</a></li>
+      <li><a href="#contato" class="block py-2">Contato</a></li>
+    </ul>
+  </div>
+</div>
+</header>
+
+        <main>
+            <!-- HERO -->
+            <section id="inicio"
+                class="relative flex min-h-[70svh] items-center justify-center overflow-hidden px-4 pt-16 text-center md:min-h-[75svh]">
+                <div class="ondas ondas-animadas absolute inset-0 opacity-10"></div>
+                <div
+                    class="flutuar absolute h-72 w-72 rounded-full bg-atum/25 ring-1 ring-ouro/40 md:h-[28rem] md:w-[28rem]">
+                </div>
+                <span aria-hidden="true"
+                    class="pointer-events-none absolute select-none font-titulo text-[9rem] leading-none text-arroz/5 md:text-[20rem]">寿司</span>
+
+                <div class="relative z-10 max-w-2xl">
+                    <p class="entrada mb-4 text-xs uppercase tracking-[0.4em] text-ouro" style="--delay: 100ms">
+                        Culinária Japonesa
+                    </p>
+                    <h1 class="entrada font-titulo text-4xl font-bold md:text-6xl" style="--delay: 250ms">
+                        Kokura Sushi
+                    </h1>
+                    <p class="entrada mx-auto mt-4 max-w-md text-arroz/80" style="--delay: 400ms">
+                        Frescor e tradição em cada peça
+                    </p>
+                </div>
+            </section>
+
+            <!-- DESTAQUES -->
+            
+                <section id="destaques" class="scroll-mt-16 bg-grafite py-20">
+                    <div class="px-4">
+                        <h2 class="reveal text-center font-titulo text-3xl md:text-4xl">Mais pedidos</h2>
+                        <div class="mx-auto mt-4 h-px w-16 bg-ouro"></div>
+                    </div>
+
+                    <div class="reveal relative mx-auto mt-12 max-w-3xl">
+                        <div class="swiper destaques-swiper">
+                            <div class="swiper-wrapper">
+                                
+                                    <div class="swiper-slide">
+                                        <article
+                                            class="flex h-full flex-col border border-ouro/20 bg-carvao transition hover:border-atum">
+                                            
+                                                <img src="images/combo-tokyo.jpg" alt="Combo Tokyo (20 peças)" loading="lazy"
+                                                    class="aspect-[4/3] w-full object-cover">
+                                                
+
+                                                        <div class="flex flex-1 flex-col p-6">
+                                                            <span
+                                                                class="self-start bg-atum px-2 py-1 text-xs uppercase tracking-widest">Destaque</span>
+                                                            <h3 class="mt-4 font-titulo text-xl md:text-2xl">
+                                                                Combo Tokyo (20 peças)
+                                                            </h3>
+                                                            <p class="mt-2 text-sm text-arroz/70">
+                                                                Salmão, atum, uramaki e hot roll.
+                                                            </p>
+                                                            <p class="mt-auto pt-6 text-lg font-semibold text-salmao">
+                                                                R$ 69,90
+                                                            </p>
+                                                        </div>
+                                        </article>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <article
+                                            class="flex h-full flex-col border border-ouro/20 bg-carvao transition hover:border-atum">
+                                            
+                                                <img src="images/combo-kyoto.jpg" alt="Combo Kyoto (50 peças)" loading="lazy"
+                                                    class="aspect-[4/3] w-full object-cover">
+                                                
+
+                                                        <div class="flex flex-1 flex-col p-6">
+                                                            <span
+                                                                class="self-start bg-atum px-2 py-1 text-xs uppercase tracking-widest">Destaque</span>
+                                                            <h3 class="mt-4 font-titulo text-xl md:text-2xl">
+                                                                Combo Kyoto (50 peças)
+                                                            </h3>
+                                                            <p class="mt-2 text-sm text-arroz/70">
+                                                                Ideal para compartilhar, com sashimis.
+                                                            </p>
+                                                            <p class="mt-auto pt-6 text-lg font-semibold text-salmao">
+                                                                R$ 159,90
+                                                            </p>
+                                                        </div>
+                                        </article>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <article
+                                            class="flex h-full flex-col border border-ouro/20 bg-carvao transition hover:border-atum">
+                                            
+                                                <img src="images/temaki-salmao.jpg" alt="Temaki de salmão simples" loading="lazy"
+                                                    class="aspect-[4/3] w-full object-cover">
+                                                
+
+                                                        <div class="flex flex-1 flex-col p-6">
+                                                            <span
+                                                                class="self-start bg-atum px-2 py-1 text-xs uppercase tracking-widest">Destaque</span>
+                                                            <h3 class="mt-4 font-titulo text-xl md:text-2xl">
+                                                                Temaki de salmão simples
+                                                            </h3>
+                                                            <p class="mt-2 text-sm text-arroz/70">
+                                                                
+                                                            </p>
+                                                            <p class="mt-auto pt-6 text-lg font-semibold text-salmao">
+                                                                R$ 26,00
+                                                            </p>
+                                                        </div>
+                                        </article>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <article
+                                            class="flex h-full flex-col border border-ouro/20 bg-carvao transition hover:border-atum">
+                                            
+                                                <img src="images/temaki-camarao.png" alt="Temaki de camarão" loading="lazy"
+                                                    class="aspect-[4/3] w-full object-cover">
+                                                
+
+                                                        <div class="flex flex-1 flex-col p-6">
+                                                            <span
+                                                                class="self-start bg-atum px-2 py-1 text-xs uppercase tracking-widest">Destaque</span>
+                                                            <h3 class="mt-4 font-titulo text-xl md:text-2xl">
+                                                                Temaki de camarão
+                                                            </h3>
+                                                            <p class="mt-2 text-sm text-arroz/70">
+                                                                
+                                                            </p>
+                                                            <p class="mt-auto pt-6 text-lg font-semibold text-salmao">
+                                                                R$ 30,00
+                                                            </p>
+                                                        </div>
+                                        </article>
+                                    </div>
+                                    
+                            </div>
+                        </div>
+
+                        <button type="button" aria-label="Item anterior"
+                            class="destaques-prev absolute left-1 top-1/2 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-ouro/60 bg-carvao/80 text-ouro backdrop-blur transition hover:bg-atum hover:text-arroz md:left-0 md:h-12 md:w-12">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                aria-hidden="true">
+                                <path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <button type="button" aria-label="Próximo item"
+                            class="destaques-next absolute right-1 top-1/2 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-ouro/60 bg-carvao/80 text-ouro backdrop-blur transition hover:bg-atum hover:text-arroz md:right-0 md:h-12 md:w-12">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                aria-hidden="true">
+                                <path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+                
+
+                        <!-- CARDÁPIO -->
+                        <section id="cardapio" class="scroll-mt-16 px-4 py-20">
+                            <div class="reveal mx-auto max-w-3xl">
+                                <h2 class="text-center font-titulo text-3xl md:text-4xl">Cardápio</h2>
+                                <div class="mx-auto mt-4 h-px w-16 bg-ouro"></div>
+
+                                <div class="mt-10 flex flex-wrap justify-center gap-2">
+                                    
+                                        <button data-tab="cat-0"
+                                            class="border border-ouro/40 px-4 py-2 text-xs uppercase tracking-widest text-arroz/70 transition hover:border-atum">
+                                            Combos
+                                        </button>
+                                        
+                                        <button data-tab="cat-1"
+                                            class="border border-ouro/40 px-4 py-2 text-xs uppercase tracking-widest text-arroz/70 transition hover:border-atum">
+                                            Sashimis
+                                        </button>
+                                        
+                                        <button data-tab="cat-2"
+                                            class="border border-ouro/40 px-4 py-2 text-xs uppercase tracking-widest text-arroz/70 transition hover:border-atum">
+                                            Uramakis
+                                        </button>
+                                        
+                                        <button data-tab="cat-3"
+                                            class="border border-ouro/40 px-4 py-2 text-xs uppercase tracking-widest text-arroz/70 transition hover:border-atum">
+                                            Temakis
+                                        </button>
+                                        
+                                        <button data-tab="cat-4"
+                                            class="border border-ouro/40 px-4 py-2 text-xs uppercase tracking-widest text-arroz/70 transition hover:border-atum">
+                                            Bebidas
+                                        </button>
+                                        
+                                </div>
+
+                                
+                                    <div id="cat-0" class="tab-panel mt-8 ">
+                                        
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Combo Tokyo (20 peças)
+                                                    </h3>
+                                                    
+                                                        <p class="text-sm text-arroz/60">
+                                                            Salmão, atum, uramaki e hot roll.
+                                                        </p>
+                                                        
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 69,90
+                                                </p>
+                                            </div>
+                                            
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Combo Osaka (30 peças)
+                                                    </h3>
+                                                    
+                                                        <p class="text-sm text-arroz/60">
+                                                            Variedade de sushis, uramakis e hot rolls.
+                                                        </p>
+                                                        
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 99,90
+                                                </p>
+                                            </div>
+                                            
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Combo Kyoto (50 peças)
+                                                    </h3>
+                                                    
+                                                        <p class="text-sm text-arroz/60">
+                                                            Ideal para compartilhar, com sashimis.
+                                                        </p>
+                                                        
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 159,90
+                                                </p>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                                    <div id="cat-1" class="tab-panel mt-8 hidden">
+                                        
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Sashimi de salmão (10 fatias)
+                                                    </h3>
+                                                    
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 38,00
+                                                </p>
+                                            </div>
+                                            
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Sashimi de atum (10 fatias)
+                                                    </h3>
+                                                    
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 42,00
+                                                </p>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                                    <div id="cat-2" class="tab-panel mt-8 hidden">
+                                        
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Uramaki Filadélfia (8 peças)
+                                                    </h3>
+                                                    
+                                                        <p class="text-sm text-arroz/60">
+                                                            Salmão, cream cheese e cebolinha.
+                                                        </p>
+                                                        
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 32,00
+                                                </p>
+                                            </div>
+                                            
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Uramaki Skin (8 peças)
+                                                    </h3>
+                                                    
+                                                        <p class="text-sm text-arroz/60">
+                                                            Pele de salmão crocante.
+                                                        </p>
+                                                        
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 28,00
+                                                </p>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                                    <div id="cat-3" class="tab-panel mt-8 hidden">
+                                        
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Temaki de salmão simples
+                                                    </h3>
+                                                    
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 26,00
+                                                </p>
+                                            </div>
+                                            
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Temaki de camarão
+                                                    </h3>
+                                                    
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 30,00
+                                                </p>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                                    <div id="cat-4" class="tab-panel mt-8 hidden">
+                                        
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Chá gelado
+                                                    </h3>
+                                                    
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 9,00
+                                                </p>
+                                            </div>
+                                            
+                                            <div
+                                                class="flex items-start justify-between gap-4 border-b border-arroz/10 py-4">
+                                                <div>
+                                                    <h3 class="font-titulo text-lg">
+                                                        Refrigerante lata
+                                                    </h3>
+                                                    
+                                                </div>
+                                                <p class="whitespace-nowrap font-semibold text-salmao">
+                                                    R$ 6,00
+                                                </p>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                            </div>
+                        </section>
+
+                        <!-- SOBRE -->
+                        <section id="sobre" class="scroll-mt-16 bg-grafite px-4 py-20">
+                            <div class="reveal mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
+                                <div>
+                                    <h2 class="font-titulo text-3xl md:text-4xl">Nossa história</h2>
+                                    <div class="mt-4 h-px w-16 bg-ouro"></div>
+                                    <p class="mt-6 leading-relaxed text-arroz/80">
+                                        Peixes frescos, arroz no ponto e o cuidado de quem leva a culinária japonesa a sério.
+                                    </p>
+                                </div>
+                                <!-- Troque este bloco por uma foto do restaurante -->
+                                <div class="grid aspect-[4/3] place-items-center border border-ouro/30 bg-carvao">
+                                    <span class="font-titulo text-8xl text-ouro/40" aria-hidden="true">和</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- HORÁRIOS -->
+                        <section id="horarios" class="scroll-mt-16 px-4 py-20">
+                            <div class="reveal mx-auto max-w-xl">
+                                <h2 class="text-center font-titulo text-3xl md:text-4xl">Horários</h2>
+                                <div class="mx-auto mt-4 h-px w-16 bg-ouro"></div>
+                                <ul class="mt-10">
+                                    
+                                        <li class="flex justify-between border-b border-arroz/10 py-3">
+                                            <span>
+                                                Segunda a Sexta
+                                            </span>
+                                            <span class="text-salmao">
+                                                11h às 15h
+                                            </span>
+                                        </li>
+                                        
+                                        <li class="flex justify-between border-b border-arroz/10 py-3">
+                                            <span>
+                                                Sábado
+                                            </span>
+                                            <span class="text-salmao">
+                                                11h às 22h
+                                            </span>
+                                        </li>
+                                        
+                                        <li class="flex justify-between border-b border-arroz/10 py-3">
+                                            <span>
+                                                Domingo
+                                            </span>
+                                            <span class="text-salmao">
+                                                Fechado
+                                            </span>
+                                        </li>
+                                        
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- CONTATO -->
+                        <section id="contato" class="scroll-mt-16 bg-grafite px-4 py-20">
+                            <div class="reveal mx-auto max-w-4xl text-center">
+                                <h2 class="font-titulo text-3xl md:text-4xl">Onde estamos</h2>
+                                <div class="mx-auto mt-4 h-px w-16 bg-ouro"></div>
+                                <p class="mt-6 text-arroz/80">
+                                    Rua Exemplo, 123 - Centro - Sua Cidade - UF
+                                </p>
+                                
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29282.37078119927!2d-46.930085789160145!3d-23.449772600000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0343070c3475%3A0xd2e691509b649107!2sKokura%20sushi!5e0!3m2!1spt-BR!2sbr!4v1792470517661!5m2!1spt-BR!2sbr" loading="lazy" title="Mapa de localização"
+                                        class="mt-8 h-72 w-full border border-ouro/30"></iframe>
+                                    
+                            </div>
+                        </section>
+        </main>
+
+        <footer class="relative overflow-hidden border-t border-ouro/20 bg-grafite px-4 py-12 text-center">
+    <div class="ondas absolute inset-0 opacity-10"></div>
+    <div class="relative">
+        <p class="font-titulo text-xl">
+            Kokura Sushi
+        </p>
+        <div class="mt-4 flex justify-center gap-6 text-sm uppercase tracking-widest">
+            
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+                    class="transition hover:text-salmao">Instagram</a>
+                
+                    
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
+                            class="transition hover:text-salmao">Facebook</a>
+                        
+        </div>
+        <p class="mt-6 text-xs text-arroz/50">&copy; 2026
+                Kokura Sushi. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer"
+    aria-label="Pedir no Whatsapp"
+    class="pulsar fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-atum px-5 py-3 text-sm font-semibold shadow-lg transition hover:brightness-110">
+    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+        <span class="hidden sm:inline">Pedir no WhatsApp</span>
+</a>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js" defer></script>
+            <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
